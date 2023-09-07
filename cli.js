@@ -233,6 +233,19 @@ async function playChannel(channel) {
       notify = noop;
     }
 
+    // add  key p for choose list of channels
+    if (key === 'p') {
+      interactive();
+    }
+
+    // add key r to random channel
+    if (key === 'r') {
+      play('random');
+    }
+
+
+
+
     // `ctrl`+`c`, `esc`, `q`
     if (['\u0003', '\u001B', 'q'].includes(key)) {
       if (currentTitle) {
